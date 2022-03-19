@@ -1,4 +1,3 @@
-
 /* Module      : MainFile.cpp
  * Author      : 
  * Email       : 
@@ -18,14 +17,9 @@
  */
 
 /* -- INCLUDE FILES ------------------------------------------------------ */
-#define _USE_MATH_DEFINES
-
-#include <GL/gl.h>
-#include <GL/glu.h>
-#include <GL/glut.h>
-#include <math.h>
-#include<stdio.h>
-#include<stdlib.h>
+#include <gl/gl.h>
+#include <gl/glu.h>
+#include <gl/glut.h>
 
 /* -- DATA STRUCTURES ---------------------------------------------------- */
 // Our point class.
@@ -84,23 +78,9 @@ void myInit( void )  {
  *
  * Returns     : void
  */
-float radius = 0.0f, x = 300, y = 300, x_1, y_1;
+
 void myDisplay( void )  {
   glClear( GL_COLOR_BUFFER_BIT );
-  glColor3f(0.0,0.0,0.0);
-  glBegin(GL_LINES);
-  for (float angle = 15; angle < 180; angle++){
-    x_1 = x;
-    y_1 = y;
-  	x = 300 + 15 * sin(angle * M_PI / 180) * radius;
-  	y = 300 + 15 * cos(angle * M_PI / 180) * radius;
-  	
-  	radius += 0.1f;
-  	glVertex2f(x, y);
-  	glVertex2f(x_1, y_1);
-  } 
-  glEnd();
-  glFlush();
 }
 
 
